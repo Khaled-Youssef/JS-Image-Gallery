@@ -1,0 +1,116 @@
+html{
+    box-sizing: border-box;
+    background-color: #ffc600;
+    font-family:  Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+body{
+    margin: 0;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+.panels{
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.panel {
+	background-color: #600F9c;
+	background-size: cover;
+	box-shadow: inset 0 0 0 1px;
+	color: #fff;
+	text-align: center;
+	align-items: center;
+	transition:  flex 0.4s cubic-bezier(0.4, -019, 0.3, -0.11), background 0.2s;
+	flex: 1;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+}
+
+
+.panel1{
+    background-image: url(images/1.webp);
+}
+
+.panel2{
+    background-image: url(images/2.jpg);
+}
+.panel3{
+    background-image: url(images/3.webp);
+}
+.panel4{
+    background-image: url(images/4.jpg);
+}
+.panel5{
+    background-image: url(images/5.jpg);
+}
+
+.panel > *{
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+}
+
+.panel > *:first-child{
+    transform: translateY(-100%);
+}
+.panel.open.open-active > *:first-child{
+    transform: translateY(0);
+}
+.panel > *:last-child{
+    transform: translateY(100%);
+}
+
+.panel.open.open-active > *:last-child{
+    transform: translateY(0);
+}
+.panel p {
+	text-transform: uppercase;
+	text-overflow: 0 0 4px rgba(0,0,0, 0.5);
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}
+
+.panel.open{
+    font-size: 40px;
+    flex: 5;
+}
+
+
+
+.copyrights {
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	bottom: 20px;
+	text-align: center;
+	font-size: 15px;
+	color: #fff;
+}
+
+
+
+
+.copyrights a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.copyrights a img {
+	width: 80px;
+	display: inline-block;
+	position: relative;
+	top: 25px;
+}
